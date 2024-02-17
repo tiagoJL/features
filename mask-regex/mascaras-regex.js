@@ -89,7 +89,7 @@ class RegexMask {
 
     setPhoneMask(){
         const attributes = {
-            pattern: "(\([0-9]{2}\))? [0-9]\.[0-9]{4}-[0-9]{4}",
+            pattern: "\\([0-9]{2}\\)\\s[0-9]\.[0-9]{4}-[0-9]{4}",
             placeholder: "(00) 0.0000-0000",
             required: true,
             autocomplete: 'off',
