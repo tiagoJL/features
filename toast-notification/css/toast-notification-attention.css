@@ -1,0 +1,11 @@
+.toast-notification-message.attention {
+    border-color: var(--toast-notification-attention);
+}
+
+.toast-notification-message.attention::after {
+    background-color: var(--toast-notification-attention);
+}
+
+.toast-notification-message.attention::before {
+    background-image: url("../assets/attention.svg");
+}

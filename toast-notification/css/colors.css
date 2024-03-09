@@ -1,0 +1,7 @@
+:root {
+    --toast-notification-attention: #FBA834;
+    --toast-notification-error: #DF2E38;
+    --toast-notification-info: #2F3E75;
+    --toast-notification-success: #416D19;
+    --toast-notification-btn-close: gray;
+}

@@ -1,0 +1,11 @@
+.toast-notification-message.info {
+    border-color: var(--toast-notification-info);
+}
+
+.toast-notification-message.info::after {
+    background-color: var(--toast-notification-info);
+}
+
+.toast-notification-message.info::before {
+    background-image: url("../assets/info.svg");
+}

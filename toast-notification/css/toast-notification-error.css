@@ -1,0 +1,11 @@
+.toast-notification-message.error {
+    border-color: var(--toast-notification-error);
+}
+
+.toast-notification-message.error::after {
+    background-color: var(--toast-notification-error);
+}
+
+.toast-notification-message.error::before {
+    background-image: url("../assets/error.svg");
+}

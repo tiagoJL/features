@@ -1,0 +1,95 @@
+.toast-notification-wrapper {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 15px;
+    gap: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.toast-notification-message {
+    display: block;
+    position: relative;
+    padding: 20px 40px 20px 50px;
+    font-size: 1.3rem;
+    max-width: fit-content;
+    border-radius: 5px;
+    text-align: left;
+    box-shadow: 1px 1px 1px 1px rgba(99, 97, 97, 0.318);
+    overflow: hidden;
+    animation-name: toast-notification-initial-transition;
+    animation-duration: 600ms;
+    border-left: 4px solid transparent;
+}
+
+.toast-notification-message::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 30px;
+    width: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.toast-notification-message.deactivate {
+    animation-name: toast-notification-initial-transition-reverse;
+    animation-duration: 600ms;
+}
+
+.toast-notification-message::after {
+    position: absolute;
+    content: "";
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    animation-name: toast-notification-bottom-loading;
+    animation-timing-function: linear;
+    animation-duration: 4400ms;
+}
+
+@keyframes toast-notification-bottom-loading {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0;
+    }
+}
+
+@keyframes toast-notification-initial-transition {
+    0% {
+        opacity: 0;
+        transform: translate(-25px);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: translate(25px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes toast-notification-initial-transition-reverse {
+    0% {
+        opacity: 1;
+        transform: none;
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: translate(-25px);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(25px);
+    }
+}

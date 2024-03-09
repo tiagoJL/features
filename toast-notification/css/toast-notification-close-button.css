@@ -1,0 +1,21 @@
+.toast-notification-close-button {
+    position: absolute;
+    padding: 0 5px;
+    border-radius: 50%;
+    top: 5px;
+    right: 5px;
+    border: 2px solid transparent;
+    background-color: transparent;
+    color: var(--toast-notification-btn-close);
+    cursor: pointer;
+    transition-duration: 300ms;
+    transition-property: transform;
+}
+
+.toast-notification-close-button:hover {
+    transform: rotate(180deg);
+}
+
+.toast-notification-close-button:active {
+    transform: rotate(250deg);
+}
