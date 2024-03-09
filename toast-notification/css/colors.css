@@ -4,4 +4,5 @@
     --toast-notification-info: #2F3E75;
     --toast-notification-success: #416D19;
     --toast-notification-btn-close: gray;
+    --toast-notification-message-background: white;
 }
